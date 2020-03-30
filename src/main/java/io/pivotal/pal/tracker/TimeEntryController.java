@@ -17,10 +17,7 @@ public class TimeEntryController {
     private final DistributionSummary timeEntrySummary;
     private final Counter actionCounter;
 
-    public TimeEntryController(
-            TimeEntryRepository timeEntriesRepo,
-            MeterRegistry meterRegistry
-    ) {
+    public TimeEntryController(TimeEntryRepository timeEntriesRepo,MeterRegistry meterRegistry) {
         this.timeEntriesRepo = timeEntriesRepo;
 
         timeEntrySummary = meterRegistry.summary("timeEntry.summary");
